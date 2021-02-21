@@ -1,0 +1,14 @@
+Q3: What is the difference between the two results (Blurring in image space and blurring
+in Fourier space)?
+
+Blurring in image space with is convolting (IMAGE * KERNEL), meaning that each pixel's value is changed so that it gets
+a weighted average of his (n^2)-1 neighbours.
+Each of the m^2 pixels is convolved as many times as the kernel's size, n^2 times.
+This process happens to pixels excluding the boundaries, as it is implementation dependent, and the output may vary
+between different implementation.
+That being said, it means that as bigger the kernel is, the more convolutions each pixel is convolved, as thus the
+blurring is bigger.
+On the contrary, while blurring in Fourier space, we make point-wise multiplication between the Fourier spectrum and
+the zero-padded kernel. Fourier is non local, and thus, making point-wise multiplication with a kernel in any size
+effects the whole picture in a uniform way. The bigger the kernel is, the further it gets from the origin, and the
+frequencies of the image the kernel effects are higher.

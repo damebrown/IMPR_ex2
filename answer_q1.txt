@@ -1,0 +1,6 @@
+Q1: Why did you get two different magnitude images?
+The convolution derivation is linear- on each pixel the same action is performed. On the contrary, the Fourier
+derivation is exponential- we multiply each frequency by it's distance from the origin, and the further the pixel
+(or, the frequency) is from the origin, the more significant the derivation will be, because we will multiply in
+a greater constant.
+This causes higher frequencies being outlined in the Fourier derivation, unlike the convolution one.

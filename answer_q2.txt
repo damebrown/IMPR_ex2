@@ -1,0 +1,6 @@
+Q2: What happens if the center of the gaussian (in the space domain) will not be at the
+(0,0) of the image? Why does it happen?
+The further you go from the center of the guassian kernel's center, the lower the values wil get.
+The F(0,0) is the zero frequency, which is the intersection of all pixels in the image. If F(0,0) will be affected by
+a different value than the gaussian kernel's center, it will receive a lower value, and this will cause the picture
+getting darker in the image space.
